@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Pacifico', cursive;
+        }
+        body {
+            background-image: url(https://cdn.wallpapersafari.com/46/17/N6Tlgd.jpg);
+            background-position-y: 20%;
+            overflow: hidden;
+        }
+        div {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 20px;
+        }
+        button {
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            top: 40%;
+            border-radius: 20px;
+        }
+        #btn1 {
+            left: 35%;
+        }
+        #btn2 {
+            left: 55%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>WHAT DO YOU WANT FOR YOUR PRESENT</h2>
+    </div>
+    <button id="btn1" onclick="move()" onmouseover="move()">A BIRTHDAY CAKE</button>
+    <button id="btn2" onclick="alert('You\'re walcome')">ME</button>
+    <script>
+        function move() {
+            var x = Math.random()*100
+            document.getElementById('btn1').style.top = `${x}%`
+            var y = Math.random()*100
+            document.getElementById('btn1').style.left = `${y}%`
+        }
+    </script>
+</body>
+</html>
